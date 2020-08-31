@@ -1,8 +1,18 @@
 # fsql-cli
-
-# cmd
 ```
+提交FLINK SQL语句执行
+```
+
+# run.sh
+```
+source $STREAM_HOME/bin/env.sh
 $FLINK_DIR/bin/flink run -c com.fsql.client.SqlCli -d -p 3 ${STREAM_HOME}/lib/fsql-cli-0.0.1.jar -f "$1" -j "$2"
+
+```
+
+# env.sh
+```
+FLINK_DIR=xxx/flink-1.11.0
 
 ```
 
@@ -47,3 +57,5 @@ from
 "
 bash $STREAM_HOME/bin/run.sh "$sql" xxx_realtime
 ```
+
+
